@@ -1,0 +1,34 @@
+# iron man
+#爬取钢铁侠的翻译
+#请求方法post
+import urllib.request
+import urllib.parse
+
+#请求路径
+url="https://cn.bing.com/ttranslatev3?&IG=AD48FE40CE414088ACC48CD1665F3E8F&IID=SERP.5678.1"
+
+#请求路径参数
+data={
+   'fromLang': 'en',
+   'text': 'iron',
+   'to': 'zh-Hans',
+   'token': 'CxeSC0ntFNGR0jO2oRb9_NVPp4ZbTmw_',
+   'key': '1674089426581',
+    }
+
+data=urllib.parse.urlencode(data).encode('utf-8')
+
+#请求头
+headers={
+    'cookie':'_EDGE_V=1; MUID=15366A5312866BF42366782B13CC6AAF; MUIDB=15366A5312866BF42366782B13CC6AAF; SRCHD=AF=NOFORM; SRCHUID=V=2&GUID=80D4F7ED2006465A9984833476486AB0&dmnchg=1; ANON=A=8DFEA595DAB299527EE8C012FFFFFFFF; WLS=C=3732f32b9a712720&N=m; MMCASM=ID=DD62659092CC445EAAEE5AEEB0D6B440; RECSEARCH=SQs=[{"q":"dbeaver"%2C"c":1%2C"ad":true}%2C{"q":"dbeaver%E5%AE%98%E7%BD%91"%2C"c":1%2C"ad":false}%2C{"q":"dbeaver%E5%BB%BA%E8%A1%A8%E8%AF%AD%E5%8F%A5"%2C"c":1%2C"ad":false}%2C{"q":"%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6%E7%94%A8%E4%B8%80%E6%AC%A1%E5%B0%B1%E8%A6%81%E5%AE%89%E8%A3%85%E4%B8%80%E6%AC%A1"%2C"c":1%2C"ad":false}%2C{"q":"vscode%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87"%2C"c":1%2C"ad":false}%2C{"q":"sql%E4%B9%8B%E7%88%B6"%2C"c":1%2C"ad":false}%2C{"q":"%E9%A6%99%E6%B8%AF%E7%9A%84%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81"%2C"c":1%2C"ad":true}%2C{"q":"%E7%BE%8E%E5%9B%BD%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81"%2C"c":1%2C"ad":true}%2C{"q":"openai"%2C"c":1%2C"ad":true}]; _EDGE_S=SID=306CF17924AE6B6A0645E30325C86A6A&ui=zh-cn&mkt=zh-cn; ZHCHATSTRONGATTRACT=TRUE; USRLOC=HS=1&BLOCK=TS=230113013616&CLOC=LAT=23.01085265373753|LON=113.75112755316125|A=733.4464586120832|TS=230119004054|SRC=W; ANIMIA=FRE=1; msau=id=8DFEA595DAB299527EE8C012FFFFFFFF&msa=1&aad=0; ZHCHATWEAKATTRACT=TRUE; _SS=SID=306CF17924AE6B6A0645E30325C86A6A&PC=LCTS&R=200&RB=0&GB=0&RG=200&RP=200; SRCHS=PC=LCTS; ABDEF=V=13&ABDV=11&MRNB=1674030501952&MRB=0; btstkn=yegRWMyHbDpvwLNmBWjFqV0SpTJWyc5hkXJwPUPevvoC4%252F9xNb0Cv0XXud7eKt8ofxrnD0Tlymib364cs4LNPrg8GYcjFPOuVG34fn%252FTjxQ%253D; _TTSS_IN=hist=WyJ6aC1IYW5zIiwiZW4iLCJhdXRvLWRldGVjdCJd; _TTSS_OUT=hist=WyJlbiIsInpoLUhhbnMiXQ==; _tarLang=default=zh-Hans; SUID=A; _U=1a49L0_9xnZete85zkBVuox8LjBZMjp6pWuvai8P4-GzRpCWVIXhKJVfZYeKQIHWub3ltBH-lOMvXZfdabr8UMwpFqaKmcR1-i7vzx8hQKHOI4qjByYw_Rko8f61aMGfNTsZurLv0VJQfOLp5vbMl92Vuff4rpkK8iK3wwH08-Gnn-CjwnnNuffBEihKpiT85; SRCHUSR=DOB=20221212&T=1674088853000; ipv6=hit=1674092457553&t=4; SNRHOP=I=&TS=; _RwBf=ilt=205&ihpd=0&ispd=12&rc=200&rb=0&gb=0&rg=200&pc=200&mtu=0&rbb=0&g=0&cid=&clo=0&v=12&l=2023-01-18T08:00:00.0000000Z&lft=2023-01-02T00:00:00.0000000-08:00&aof=0&o=2&p=&c=&t=0&s=0001-01-01T00:00:00.0000000+00:00&ts=2023-01-19T00:41:47.8778597+00:00&rwred=0&wls=&lka=0&lkt=0&TH=; SRCHHPGUSR=SRCHLANG=zh-Hans&PV=14.0.0&BZA=0&BRW=NOTP&BRH=M&CW=489&CH=781&SCW=1164&SCH=3922&DPR=2.0&UTC=480&DM=0&EXLTT=31&HV=1674088909&PRVCW=489&PRVCH=781&PR=2'}
+
+#定制请求对象
+request=urllib.request.Request(url,data,headers)
+
+#模拟浏览器向服务器发送请求
+response=urllib.request.urlopen(request)
+
+#获取响应内容
+content=response.read().decode("utf-8")
+
+print(content)

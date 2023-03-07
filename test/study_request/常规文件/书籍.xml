@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><collection type="New Arrivals">		
+			<book 语言="java">				
+						<!--这是一条注释-->				
+						<name>java基础</name>				
+						<价格>99元</价格>				
+						<number>剩余100本</number>				
+			</book>		
+			<book 语言="python">				
+						<name>python基础</name>				
+						<价格>50元</价格>				
+						<number>剩余20本</number>				
+			</book>		
+		<book 语言="c++">						<name>c++基础</name>						<价格>200元</价格>						<number>剩余300本</number>				</book>	<book 语言="c++">		<name>c++基础</name>		<价格>200元</价格>		<number>剩余300本</number>	</book></collection>
